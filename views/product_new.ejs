@@ -3,101 +3,88 @@
   <li class="active">Create New Product</li>
 </ol>
   
-    <h1>Create New Product</h1>
+<h1>Create New Product</h1>
   <div class="container">
-  <form id="product/new" action="/product/new" method="POST">
-  <div class="form-group row">
-  <label for="example-text-input" class="col-xs-2 col-form-label">Model</label>
-  <div class="col-xs-10">
-    <input class="form-control" type="text" name="model" id="example-text-input">
-  </div>
-</div>
-
-<fieldset class="form-group row">
-      <legend class="col-form-legend col-sm-2">Color</legend>
-      <div class="col-sm-10">
-        <div class="form-check">
-          <label class="form-check-label">
-            <input class="form-check-input" type="radio" name="color" id="gridRadios1" value="white" checked>
-            White
-          </label>
-        </div>
-        <div class="form-check">
-          <label class="form-check-label">
-            <input class="form-check-input" type="radio" name="color" id="gridRadios2" value="ivory">
-            Ivory
-          </label>
-        </div>
-        <div class="form-check">
-          <label class="form-check-label">
-            <input class="form-check-input" type="radio" name="color" id="gridRadios1" value="grey" >
-            Grey
-          </label>
-        </div>
-        <div class="form-check">
-          <label class="form-check-label">
-            <input class="form-check-input" type="radio" name="color" id="gridRadios2" value="light_grey">
-            Grey
-          </label>
-        </div>
-        <div class="form-check">
-          <label class="form-check-label">
-            <input class="form-check-input" type="radio" name="color" id="gridRadios1" value="brown" >
-            Brown
-          </label>
-        </div>
-        <div class="form-check">
-          <label class="form-check-label">
-            <input class="form-check-input" type="radio" name="color" id="gridRadios2" value="chocolate">
-            Chocolate
-          </label>
+    <form id="product/new" action="/product/new" method="POST">
+      <div class="form-group row">
+       <label for="example-text-input" class="col-xs-2 col-form-label">Model</label>
+        <div class="col-xs-10">
+          <select class="form-control" name="model">
+                <option>Alice</option>
+                <option>Bonita</option>
+                <option>Amante</option>
+                <option>Java</option>
+                <option>Jasmine</option>
+          </select>
         </div>
       </div>
-    </fieldset>
-</div>
 
-<fieldset class="form-check-inline form-group row">
-      <legend class="col-form-legend col-sm-2">Type</legend>
-      <div class="col-sm-10">
-        <div class="form-check">
-          <label class="form-check-label">
-            <input class="form-check-input" type="radio" name="type" id="gridRadios1" value="Blackout" checked>
-            Blackout
-          </label>
-        </div>
-        <div class="form-check">
-          <label class="form-check-label">
-            <input class="form-check-input" type="radio" name="type" id="gridRadios2" value="Normal">
-            Normal
-          </label>
-        </div>
-        
+
+      <div class="form-group row">
+            <label for="example-text-input" class="col-xs-2 col-form-label">Color</label>
+              <div class="col-xs-10">
+                  <select class="form-control" name="color">
+                      <option>White</option>
+                      <option>Ivory</option>
+                      <option>Light Grey</option>
+                      <option>Grey</option>
+                      <option>Brown</option>
+                      <option>Chocolate</option>
+                      <option>Black</option>
+                  </select>
+              </div>
+          </div>
       </div>
-    </fieldset>
 
-<div class="form-group row">
-  <label for="example-text-input" class="col-xs-2 col-form-label">Price</label>
-  <div class="col-xs-10">
-    <input class="form-control" type="text" name="price" id="example-text-input">
-  </div>
-</div>
-<div class="form-group row">
-  <label for="example-text-input" class="col-xs-2 col-form-label">Max Width</label>
-  <div class="col-xs-10">
-    <input class="form-control" type="text" name="maxWidth" id="example-text-input">
-  </div>
-</div>
-<div class="form-group row">
-  <label for="example-text-input" class="col-xs-2 col-form-label">imgFileLocation</label>
-  <div class="col-xs-10">
-    <input class="form-control" type="text" name="imgFileLocation" id="example-text-input">
-  </div>
-</div>
+
+      <div class="form-group row">
+            <label for="example-text-input" class="col-xs-2 col-form-label">Type</label>
+              <div class="col-xs-10">
+                  <select class="form-control" name="type">
+                      <option>Blackout</option>
+                      <option>Dimmer</option>
+                      <option>Natural</option>
+                  </select>
+              </div>
+      </div>
+
+      <div class="form-group row">
+            <label for="example-text-input" class="col-xs-2 col-form-label">Price</label>
+              <div class="col-xs-10">
+                  <select class="form-control" name="price">
+                      <option>50</option>
+                      <option>60</option>
+                      <option>70</option>
+                      <option>80</option>
+                      <option>90</option>
+                      <option>100</option>
+                  </select>
+            </div>
+      </div>
+
+
+      <div class="form-group row">
+            <label for="example-text-input" class="col-xs-2 col-form-label">Max Width</label>
+              <div class="col-xs-10">
+                  <select class="form-control" name="maxWidth">
+                      <option>2.80</option>
+                      <option>3.00</option>
+                      <option>3.20</option>
+                  </select>
+            </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="example-text-input" class="col-xs-2 col-form-label">imgFileLocation</label>
+        <div class="col-xs-10">
+          <input class="form-control" type="text" name="imgFileLocation" id="example-text-input">
+        </div>
+      </div>
     
-    <div class="form-group row">
-      <div class="offset-sm-2 col-sm-10">
-        <button type="submit" class="btn btn-primary">Create New Product</button>
+      <div class="form-group row">
+        <div class="offset-sm-2 col-sm-10">
+          <button type="submit" class="btn btn-primary">Create New Product</button>
+        </div>
       </div>
-    </div>
-  </form>
-</div>
+    </form>
+  </div>

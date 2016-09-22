@@ -29,7 +29,7 @@ router.post('/signup', function(req, res) {
                 successFlash: 'Account created and logged in'
             })(req, res);
         } else {
-            req.flash('error', 'Email already exists, please login');
+            req.flash('error', 'Email already exists, please login or reset password');
             res.redirect('/auth/login');
         }
     }).catch(function(error) {
@@ -45,7 +45,7 @@ router.get('/login', function(req, res) {
 router.post('/login', passport.authenticate('local', {
     successRedirect: '/product',
     failureRedirect: '/auth/login',
-    failureFlash: 'Invalid username and/or password',
+    failureFlash: 'Invalid username and/or password, please login again',
     successFlash: 'You have logged in'
 }));
 
@@ -72,7 +72,7 @@ router.post('/passwordReset', function(req, res) {
                     user.update({
                     password: password1
             }).then(function() {
-                    req.flash('success', 'Password Changed');
+                    req.flash('success', 'Password reset successfully. Please login again');
                 res.redirect('/');
             })
 

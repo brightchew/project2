@@ -4,22 +4,30 @@
   <li class="active">Product Detail: <%=product.model %> /Product ID <%= product.id%> </a></li>
 </ol>
     
-    <h1>Product Detail</h1>
+    <h5>Product Detail</h5>
 
     <div class="product">
     <img src="/<%=product.imgFileLocation%>" width="20%" />
-      <h2>
-        <%= product.model %> - <%= product.color %> - <%= product.type %> - <%= product.price %> - <%= product.maxWidth %> - <%= product.imgFileLocation %>
-      </h2>
+      <p>
+        <table class="table">
+        <tr>
+        <th> Model </th><th> Color </th><th> Type </th><th> Price </th><th> Max Width </th><th> imgFileLocation </th>
+        </tr>
+        <tr>
+        <td><%= product.model %> </td><td><%= product.color %></td><td><%= product.type %> </td><td><%= product.price %></td><td><%= product.maxWidth %></td><td><%= product.imgFileLocation %></td>
+        </tr>
+        </table>
+
+
+        
+      </p>
       
       <p>
-        <a href="/product/<%= product.id %>/edit">
-          edit
-        </a>
+        <a href="/product/<%= product.id %>/edit"> Edit Product </a>
       </p>
     </div>
 
     <p>
-      <a href="/product"><< back to all products</a>
+      <a href="/product"><< Back to all products</a>
     </p>
   

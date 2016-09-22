@@ -18,7 +18,7 @@
   <tr>
     <th>ID</th>
     <th>Product Photo</th>
-    <th>Model></th>
+    <th>Model</th>
     <th>Type</th>
     <th>Color</th>
     <th>Max Width</th>
@@ -29,7 +29,7 @@
   <% for (var i=0; i<products.length; i++) { %>
   <tr>
     <td><a href="/product/<%= products[i].id %>"><%=products[i].id %></a></td>
-    <td><a href="/product/<%= products[i].id %>"><img src="/<%= products[i].imgFileLocation %>" height="100"></a></td>
+    <td><a href="/product/<%= products[i].id %>"><img src="/<%= products[i].imgFileLocation %>" height="100" width="100"></a></td>
     <td><a href="/product/<%= products[i].id %>"><%=products[i].model%></a></td>
     <td><a href="/product/<%= products[i].id %>"><%=products[i].type%></a></td>
     <td><a href="/product/<%= products[i].id %>"><%=products[i].color%></a></td>
