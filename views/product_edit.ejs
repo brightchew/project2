@@ -1,0 +1,51 @@
+<ol class="breadcrumb">
+  <li><a href="/product">All Products</a></li>
+  <li><a href="/product/<%= product.id %>">Product Detail: <%= product.model %> </a></li>
+  <li class="active">Edit <%= product.id %></li>
+</ol>
+
+    <h1>Product Detail</h1>
+
+    <div class="product">
+      <form method="POST" action="/product/<%= product.id %>">
+      
+        <div>
+          <!-- we're making our app so no one can change the id. -->
+          ID: <%= product.id %>
+          <input type="hidden" value="<%= product.id %>">
+        </div>
+        <div>
+          Model: <input type="text" name="model" value="<%= product.model %>">
+        </div>
+        <div>
+          color: <input type="text" name="color" value="<%= product.color %>">
+        </div>
+        <div>
+          Type: <input type="text" name="type" value="<%= product.type %>">
+        </div>
+        <div>
+          Price: <input type="text" name="price" value="<%= product.price %>">
+        </div>
+        <div>
+          maxWidth: <input type="text" name="maxWidth" value="<%= product.maxWidth %>">
+        </div>
+        <div>
+          imgFileLocation: <input type="text" name="imgFileLocation" value="<%= product.imgFileLocation %>">
+        </div>
+
+
+        <button type="submit">save changes</button>
+      </form>
+
+
+
+      <form method="post" action="/product/delete/<%= product.id %>">
+        <button type="submit">delete product</button>
+      </form>
+    </div>
+
+    <p>
+      <a href="/product/<%= product.id %>"><< back to product</a>
+    </p>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+
+    <ol class="breadcrumb">
+  <li><a href="/product">All Products</a></li>
+  <li class="active">Product Detail: <%=product.model %> /Product ID <%= product.id%> </a></li>
+</ol>
+    
+    <h1>Product Detail</h1>
+
+    <div class="product">
+    <img src="/<%=product.imgFileLocation%>" width="20%" />
+      <h2>
+        <%= product.model %> - <%= product.color %> - <%= product.type %> - <%= product.price %> - <%= product.maxWidth %> - <%= product.imgFileLocation %>
+      </h2>
+      
+      <p>
+        <a href="/product/<%= product.id %>/edit">
+          edit
+        </a>
+      </p>
+    </div>
+
+    <p>
+      <a href="/product"><< back to all products</a>
+    </p>
+  
