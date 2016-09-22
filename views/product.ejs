@@ -1,3 +1,4 @@
+
 <ol class="breadcrumb">
   
   <li class="active">All Products</li>
@@ -7,20 +8,48 @@
 
     <p>
       <a href="product/new">Add a new product</a>
-
     </p>
 
-    <div class="products">
-      <% for (var i = 0; i < products.length; i++) { %>
-        <div class="product">
-          <h3> ID: <%=products[i].id %> | <a href="/product/<%= products[i].id %>">
-              <%= products[i].model %> </a> |
-            
-            Color: <%=products[i].color %> | Type: <%=products[i].type %> | Color: <%= products[i].color %> | Price <%=products[i].price %> | Max Width <%=products[i].maxWidth %> </h3>
-        </div>
-      <% } %>
-    </div>
-  
-    <p>
-      <a href="/"><< back to home page</a>
-    </p>
+<div id="product"> 
+<table id="productTable" class="table" >
+<tbody>
+
+<thead>
+  <tr>
+    <th>ID</th>
+    <th>Product Photo</th>
+    <th>Model></th>
+    <th>Type</th>
+    <th>Color</th>
+    <th>Max Width</th>
+    <th>Price</th>
+  </tr>
+</thead>
+<tbody>
+  <% for (var i=0; i<products.length; i++) { %>
+  <tr>
+    <td><a href="/product/<%= products[i].id %>"><%=products[i].id %></a></td>
+    <td><a href="/product/<%= products[i].id %>"><img src="/<%= products[i].imgFileLocation %>" height="100"></a></td>
+    <td><a href="/product/<%= products[i].id %>"><%=products[i].model%></a></td>
+    <td><a href="/product/<%= products[i].id %>"><%=products[i].type%></a></td>
+    <td><a href="/product/<%= products[i].id %>"><%=products[i].color%></a></td>
+    <td><a href="/product/<%= products[i].id %>"><%=products[i].maxWidth%></a></td>
+    <td><a href="/product/<%= products[i].id %>"><%=products[i].price%></a></td>
+  </tr>
+</tbody>
+
+<%}%>
+
+
+<tbody>
+</table>
+</div>
+
+<p>
+      <a href="/">< back to home page</a>
+</p>
+
+
+
+
+
