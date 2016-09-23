@@ -7,7 +7,7 @@ module.exports = function(sequelize, DataTypes) {
               type: DataTypes.STRING,
               validate: {
                 len: {
-                  args: [1,99],
+                  args: [3,99],
                   msg: 'Name must be between 1-99'
                 }
               }
@@ -16,7 +16,7 @@ module.exports = function(sequelize, DataTypes) {
               type: DataTypes.STRING,
               validate:{
                 len: {
-                  args: [1,99],
+                  args: [3,99],
                   msg:'Name must be between 1 to 99'
                 }
               }
@@ -33,7 +33,7 @@ module.exports = function(sequelize, DataTypes) {
               type: DataTypes.STRING,
               validate: {
                 len: {
-                  args: [1,99],
+                  args: [8,99],
                   msg: 'password must be between 8 to 99 characters'
                 }
               }
