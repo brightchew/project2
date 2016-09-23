@@ -14,3 +14,22 @@ th, td {
 tbody tr:hover {
   background: yellow;
 }
+
+a:link {
+    color: white;
+}
+
+/* visited link */
+a:visited {
+    color: red;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
