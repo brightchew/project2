@@ -4,8 +4,9 @@ var isLoggedIn = require('../middleware/isLoggedIn');
 var router = express.Router();
 
 router.get('/', isLoggedIn, function(req, res) {
+    var username = req.user.firstName + " " + req.user.lastName;
     db.combiblind.findAll().then(function(products) {
-        res.render('product', { products: products });
+        res.render('product', { products: products, userName: username });
     });
 });
 
@@ -81,7 +82,14 @@ router.post("/:id",isLoggedIn, function(req, res) {
 
 });
 
-router.post("/delete/:id", isLoggedIn,function(req, res){
+router.get("/:id/delete", isLoggedIn, function(req, res) {
+    res.redirect("/:id/edit", {product:product});
+
+});
+
+
+
+router.post("/:id/delete", isLoggedIn,function(req, res){
     db.combiblind.destroy({
   where: { id: req.params.id }
 }).then(function() {

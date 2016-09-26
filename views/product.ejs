@@ -4,7 +4,7 @@
   <li class="active">All Products</li>
 </ol>
 
-<h1>All Products</h1>
+<h1>All Products <span> <small> (User Name: <%= userName %>)</small><span> </h1>
 
     <p>
       <a href="product/new">Add a new product</a>
@@ -23,18 +23,23 @@
     <th>Color</th>
     <th>Max Width</th>
     <th>Price</th>
+    <th>Edit</th>
+    <th>Delete</th>
   </tr>
 </thead>
 <tbody>
   <% for (var i=0; i<products.length; i++) { %>
   <tr>
     <td><a href="/product/<%= products[i].id %>"><%=products[i].id %></a></td>
-    <td><a href="/product/<%= products[i].id %>"><img src="/<%= products[i].imgFileLocation %>" height="100" width="100"></a></td>
+    <td ><a class="gallery" href="/product/<%= products[i].id %>"><img src="/<%= products[i].imgFileLocation %>" height="100" width="100"></a></td>
     <td><a href="/product/<%= products[i].id %>"><%=products[i].model%></a></td>
     <td><a href="/product/<%= products[i].id %>"><%=products[i].type%></a></td>
     <td><a href="/product/<%= products[i].id %>"><%=products[i].color%></a></td>
     <td><a href="/product/<%= products[i].id %>"><%=products[i].maxWidth%></a></td>
     <td><a href="/product/<%= products[i].id %>"><%=products[i].price%></a></td>
+    <td><a href="/product/<%=products[i].id%>/edit">Edit</a></td>
+    <td><a href="/product/<%=products[i].id%>/edit">Delete</td>
+
   </tr>
 </tbody>
 
@@ -49,7 +54,9 @@
       <a href="/">< back to home page</a>
 </p>
 
-
+<script>
+    $('a.gallery').colorbox({rel:'gal'});
+    </script>
 
 
 
